@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corner Life Logistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="tablet" class="tablet hidden">
+        <aside class="rail">
+            <div class="brand">
+                <span class="mark">CL</span>
+                <div>
+                    <strong>Corner Life</strong>
+                    <small>Trucking & Logistics</small>
+                </div>
+            </div>
+            <button class="tab active" data-tab="contracts">Contracts</button>
+            <button class="tab" data-tab="truck">Truck</button>
+            <button class="tab" data-tab="company">Company</button>
+            <button class="tab" data-tab="licenses">Licenses</button>
+            <button class="tab" data-tab="history">History</button>
+            <button id="closeBtn" class="close">Close</button>
+        </aside>
+
+        <section class="screen">
+            <header class="topbar">
+                <div>
+                    <h1 id="companyName">Corner Life RP Trucking & Logistics</h1>
+                    <p id="driverLine">Driver profile loading</p>
+                </div>
+                <div class="stats">
+                    <span><b id="level">1</b> Level</span>
+                    <span><b id="xp">0</b> XP</span>
+                    <span><b id="rep">0</b> Rep</span>
+                </div>
+            </header>
+
+            <section id="contracts" class="panel active">
+                <div class="sectionTitle">
+                    <h2>Available Freight</h2>
+                    <button id="refreshBtn">Refresh</button>
+                </div>
+                <div id="activeJob" class="activeJob muted">No active delivery</div>
+                <div id="contractGrid" class="grid"></div>
+            </section>
+
+            <section id="truck" class="panel">
+                <div class="sectionTitle">
+                    <h2>Rig Telemetry</h2>
+                    <button id="cancelJobBtn">Cancel Job</button>
+                </div>
+                <div id="telemetry" class="telemetry"></div>
+            </section>
+
+            <section id="company" class="panel">
+                <div class="sectionTitle">
+                    <h2>Fleet Office</h2>
+                    <button id="hireBtn">Hire Driver</button>
+                </div>
+                <div id="companyGrid" class="grid"></div>
+                <div class="sectionTitle compact">
+                    <h2>Garage Upgrades</h2>
+                </div>
+                <div id="upgradeGrid" class="grid compactGrid"></div>
+            </section>
+
+            <section id="licenses" class="panel">
+                <div class="sectionTitle">
+                    <h2>Licenses</h2>
+                </div>
+                <div id="licenseGrid" class="grid compactGrid"></div>
+                <div class="sectionTitle compact">
+                    <h2>Truck Market</h2>
+                </div>
+                <div id="truckMarket" class="grid compactGrid"></div>
+            </section>
+
+            <section id="history" class="panel">
+                <div class="sectionTitle">
+                    <h2>Delivery History</h2>
+                </div>
+                <div id="historyList" class="history"></div>
+            </section>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
